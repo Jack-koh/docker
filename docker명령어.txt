@@ -1,0 +1,17 @@
+docker rmi <id> : docker 이미지 삭제
+docker rm <id> : docker 중지된 컨테이너 삭제
+docker system prune: docker 중지된 컨테이너 모두 삭제
+docker exec <id> : 실행중인 컨테이너에 명령어 전달
+docker exec -it <id> sh : 실행중인 컨테이너에 sh 쉘 실행후 빠져나오지 않음 (-it: interactive terminal)
+
+docker build ./ : 도커파일 빌드 명령어. (./ 현재 디렉토리에서 도커파일을 찾는명령어)
+docker build -t 도커아이디 ./ : 도커파일 빌드시 name을 명시할수 있다
+
+docker run -p <host>  : <port> <ID>
+docker run -d -p <host>  : <port> <ID> : 컨테이너를 실행후 터미널에서 빠져나온다
+
+docker build -f Dockerfile.dev ./ : 빌드할 도커파일명을 명시할수도 있다.
+docker run -it -p 3000:3000 <ID>: 리액트를 개발환경에서 실행할때는 it 명령어가 있어야한다
+
+docker volumn ls : 볼륨 리스트 확인
+docker volumn prune : 사용하지 않는 볼륨 삭제
